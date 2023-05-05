@@ -1,0 +1,30 @@
+{
+    "name": "yllw-digital/promo-codes",
+    "version": "1.0.0",
+    "description": "This package is a plug and play package for adding the promoc code discount features to your project",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Joe Abdel Sater",
+            "email": "joegabdelsater@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "YllwDigital\\PromoCodes\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YllwDigital\\PromoCodes\\PromoCodesServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    
+    
+    "minimum-stability": "stable"
+}
+
