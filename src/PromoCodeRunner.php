@@ -1,8 +1,8 @@
 <?php
 
-namespace YllwDigital\PromoCodes;
+namespace Joegabdelsater\PromoCodes;
 
-use YllwDigital\PromoCodes\Models\PromoCode;
+use Joegabdelsater\PromoCodes\Models\PromoCode;
 
 class PromoCodeRunner
 {
