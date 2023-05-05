@@ -20,7 +20,9 @@
             "providers": [
                 "Joegabdelsater\\PromoCodes\\PromoCodesServiceProvider"
             ],
-            "aliases": {}
+            "aliases": {
+                "PromoCodes": "Joegabdelsater\\PromoCodes\\Facades\\PromoCodes"
+            }
         }
     },
     "minimum-stability": "stable"
