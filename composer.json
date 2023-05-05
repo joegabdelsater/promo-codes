@@ -1,5 +1,5 @@
 {
-    "name": "yllw-digital/promo-codes",
+    "name": "joegabdelsater/promo-codes",
     "version": "1.0.0",
     "description": "This package is a plug and play package for adding the promoc code discount features to your project",
     "type": "library",
@@ -11,14 +11,14 @@
     ],
     "autoload": {
         "psr-4": {
-            "YllwDigital\\PromoCodes\\": "src/"
+            "Joegabdelsater\\PromoCodes\\": "src/"
         }
     },
     "require": {},
     "extra": {
         "laravel": {
             "providers": [
-                "YllwDigital\\PromoCodes\\PromoCodesServiceProvider"
+                "Joegabdelsater\\PromoCodes\\PromoCodesServiceProvider"
             ],
             "aliases": {}
         }
