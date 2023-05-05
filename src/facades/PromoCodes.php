@@ -1,5 +1,5 @@
 <?php
-namespace YllwDigital\PromoCodes\Facades;
+namespace Joegabdelsater\PromoCodes\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

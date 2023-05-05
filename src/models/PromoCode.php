@@ -1,6 +1,6 @@
 <?php
 
-namespace YllwDigital\PromoCodes\Models;
+namespace Joegabdelsater\PromoCodes\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

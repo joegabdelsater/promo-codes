@@ -1,6 +1,6 @@
 <?php
 
-namespace YllwDigital\PromoCodes;
+namespace Joegabdelsater\PromoCodes;
 
 use Illuminate\Support\ServiceProvider;
 
