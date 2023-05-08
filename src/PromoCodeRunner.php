@@ -35,23 +35,23 @@ class PromoCodeRunner
         $user = auth()->user();
 
         if (!$code) {
-            return false;
+            return [ 'status' => false, 'message' => "Invalid promo code" ];
         }
 
         if ($code->max_uses && $code->uses >= $code->max_uses) {
-            return false;
+            return ['status' => false, 'message' => "Promo code has been used too many times"];
         }
 
         if ($code->valid_from && $code->valid_from > now()) {
-            return false;
+            return ['status' => false, 'message' => "Promo code is not valid yet"];
         }
 
         if ($code->valid_to && $code->valid_to < now()) {
-            return false;
+            return ['status' => false, 'message' => "Promo code has expired"];
         }
 
         if ($user && $code->userPromoCodes()->where('user_id', $user->id)->exists()) {
-            return false;
+            return ['status' => false, 'message' => "Promo code has already been used by you"];
         }
 
         return $code;
@@ -76,6 +76,20 @@ class PromoCodeRunner
             ]);
         }
 
-        return true;
+        return $promoCode;
+    }
+
+    public static function calculate($amount, $discount_type, $discount_amount) {
+        if ($discount_type == 'percentage') {
+            return [
+                'total' =>  $amount - ($amount * ($discount_amount / 100)),
+                'discount' => $amount * ($discount_amount / 100)
+            ];
+        }
+        
+        return [
+            'total' => $amount - $discount_amount,
+            'discount' => $discount_amount
+        ];
     }
 }
