@@ -54,29 +54,29 @@ class PromoCodeRunner
             return ['status' => false, 'message' => "Promo code has already been used by you"];
         }
 
-        return $code;
+        return ['status' => true, 'code' => $code];
     }
 
     public static function apply($code)
     {
         $promoCode = self::validate($code);
 
-        if (!$promoCode) {
-            return false;
+        if (!$promoCode['status']) {
+            return $promoCode;
         }
 
-        $promoCode->uses += 1;
-        $promoCode->save();
+        $promoCode['code']->uses += 1;
+        $promoCode['code']->save();
 
         $user = auth()->user();
 
         if ($user) {
-            $promoCode->userPromoCodes()->create([
+            $promoCode['code']->userPromoCodes()->create([
                 'user_id' => $user->id
             ]);
         }
 
-        return $promoCode;
+        return $promoCode['code'];
     }
 
     public static function calculate($amount, $discount_type, $discount_amount) {
@@ -86,7 +86,7 @@ class PromoCodeRunner
                 'discount' => $amount * ($discount_amount / 100)
             ];
         }
-        
+
         return [
             'total' => $amount - $discount_amount,
             'discount' => $discount_amount
