@@ -1,7 +1,7 @@
 {
     "name": "joegabdelsater/promo-codes",
     "description": "This package is a plug and play package for adding the promoc code discount features to your project",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "type": "library",
     "license": "MIT",
     "authors": [
