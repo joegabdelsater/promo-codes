@@ -2,7 +2,7 @@
 
 namespace Joegabdelsater\PromoCodes;
 
-use Joegabdelsater\PromoCodes\Models\PromoCode;
+use App\Models\PromoCode;
 
 class PromoCodeRunner
 {
