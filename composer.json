@@ -1,7 +1,7 @@
 {
     "name": "joegabdelsater/promo-codes",
     "description": "This package is a plug and play package for adding the promoc code discount features to your project",
-    "version": "1.7.0",
+    "version": "2.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Joegabdelsater\\PromoCodes\\": "src/"
+            "Joegabdelsater\\PromoCodes\\Facades": "src/facades"
         }
     },
     "require": {},
