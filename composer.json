@@ -1,6 +1,6 @@
 {
     "name": "joegabdelsater/promo-codes",
-    "description": "This package is a plug and play package for adding the promoc code discount features to your project",
+    "description": "This package is a plug and play package for adding the promo code discount features to your project",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Joegabdelsater\\PromoCodes\\Facades\\": "src/facades"
+            "Joegabdelsater\\PromoCodes\\": "src/"
         }
     },
     "require": {},
