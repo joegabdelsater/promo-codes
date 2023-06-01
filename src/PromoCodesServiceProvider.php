@@ -27,8 +27,8 @@ class PromoCodesServiceProvider extends ServiceProvider
         ]);
 
         $this->publishes([
-            __DIR__.'/Models/PromoCode.php' => app_path('Models'),
-            __DIR__.'/Models/UserPromoCode.php' => app_path('Models'),
+            __DIR__.'/Models/PromoCode.php' => app_path('Models/PromoCode.php'),
+            __DIR__.'/Models/UserPromoCode.php' => app_path('Models/UserPromoCode.php'),
         ], 'promo-codes-models');
     }
 }
